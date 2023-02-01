@@ -19,6 +19,9 @@
     padding: 2vw;
     margin-bottom: 2vw;
   }
+  .products > .card-container > .card > a.details {
+    padding: 1.5vw 0vw;
+  }
 }
 *,
 *::before,
