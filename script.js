@@ -74,12 +74,6 @@ async function caller() {
 	updateCart(cart);
 
 	document.addEventListener('click', (e) => {
-		if (
-			!e.target.classList.contains('cart-container') &&
-			!e.target.classList.contains('shopping-cart')
-		) {
-			cartContainer.classList.add('hidden');
-		}
 		if (e.target.classList.contains('addToCart')) {
 			const id = e.target.parentElement.children[1].innerText;
 			if (cart[id]) {
