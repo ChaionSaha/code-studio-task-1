@@ -1,0 +1,29 @@
+@media only screen and (max-width: 576px) {
+	.products {
+		& > .category-name {
+			display: flex;
+			justify-content: center;
+		}
+
+		& > .card-container {
+			& > .card {
+				width: 50vw;
+				text-align: center;
+
+				& > .btns {
+					flex-direction: column;
+
+					& > p.price {
+						padding: 2vw;
+						margin-bottom: 2vw;
+					}
+
+					& > button {
+						padding: 2vw;
+						margin-bottom: 2vw;
+					}
+				}
+			}
+		}
+	}
+}

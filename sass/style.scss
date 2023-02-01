@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
 @import './variables';
+@import './mediaqueries';
 
 *,
 *::before,
@@ -25,26 +26,24 @@ a.category-name {
 	color: $color-blue;
 	font-size: 150%;
 	text-align: left;
+	margin-left: 15px;
 }
 
-// .products {
-// 	display: flex;
-// 	flex-direction: column;
-// 	justify-content: center;
-// 	align-items: center;
-// }
-
 .card-container {
+	// border: 1px solid black;
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: baseline;
+	justify-content: space-evenly;
+	margin-top: 1.2vw;
 
 	& > .card {
+		min-width: 150px;
+		width: 10vw;
+
 		padding: 1vw;
 		box-shadow: 0 0.1vw 0.5vw rgba(0, 0, 0, 0.2);
 		border-radius: 1vw;
-		min-width: 220px;
-		width: 15vw;
+
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
@@ -67,6 +66,7 @@ a.category-name {
 		& > .btns {
 			display: flex;
 			margin-bottom: 1.5vw;
+			justify-content: space-between;
 
 			& > p.price {
 				color: $color-white;
@@ -77,14 +77,14 @@ a.category-name {
 				border-radius: 0.4vw;
 				font-size: 100%;
 				font-weight: 600;
-				margin-right: 2vw;
+
 				&:hover {
 					background-color: darken($color-grey, 10%);
 				}
 			}
 
 			& > button {
-				padding: 0.5vw 1.3vw;
+				padding: 2% 10%;
 				cursor: pointer;
 				border-radius: 0.4vw;
 				font-size: 100%;
