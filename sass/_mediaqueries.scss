@@ -31,4 +31,14 @@
 			}
 		}
 	}
+
+	.cart-container {
+		& > .shopping-cart {
+			min-height: 10vw;
+		}
+
+		& > .cart {
+			width: 100vw;
+		}
+	}
 }

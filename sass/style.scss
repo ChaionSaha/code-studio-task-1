@@ -13,6 +13,7 @@
 body {
 	font-family: 'Hind Siliguri', sans-serif;
 	padding: 1.5vw;
+	position: relative;
 }
 
 h1.header {
@@ -30,7 +31,6 @@ a.category-name {
 }
 
 .card-container {
-	// border: 1px solid black;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-evenly;
@@ -116,4 +116,56 @@ a.category-name {
 			}
 		}
 	}
+
+	p.id {
+		display: none;
+	}
+}
+
+.cart-container {
+	position: fixed;
+	right: 0;
+	top: 50%;
+
+	display: flex;
+	transition: all 300ms;
+	// transform: translateX(20.2vw);
+
+	& > .shopping-cart {
+		height: 2vw;
+		min-height: 35px;
+		padding: 0.7vw;
+		border-radius: 0.3vw;
+		border: 1px solid $color-blue;
+		cursor: pointer;
+
+		transition: all 300ms;
+		margin-right: 0.2vw;
+		background: lighten($color-blue, 5%);
+		fill: $color-white;
+
+		&:hover {
+			background: $color-blue;
+		}
+	}
+
+	& > .cart {
+		width: 20vw;
+		min-width: 350px;
+		height: 100vh;
+		border: 1px solid lighten(black, 70%);
+		border-right: none;
+		background: #fff;
+		transform: translateY(-50%);
+	}
+}
+
+.logo {
+	width: 200px;
+	height: 164px;
+	fill: aqua;
+}
+
+.hidden {
+	transform: translateX(85%) !important;
 }

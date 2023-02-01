@@ -23,6 +23,12 @@
   .products > .card-container > .card > a.details {
     padding: 1.5vw 0vw;
   }
+  .cart-container > .shopping-cart {
+    min-height: 10vw;
+  }
+  .cart-container > .cart {
+    width: 100vw;
+  }
 }
 *,
 *::before,
@@ -36,6 +42,7 @@
 body {
   font-family: "Hind Siliguri", sans-serif;
   padding: 1.5vw;
+  position: relative;
 }
 
 h1.header {
@@ -126,4 +133,49 @@ a.category-name {
 .card-container > .card > a.details:hover {
   background-color: #000;
   color: #fff;
+}
+.card-container p.id {
+  display: none;
+}
+
+.cart-container {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  display: flex;
+  transition: all 300ms;
+}
+.cart-container > .shopping-cart {
+  height: 2vw;
+  min-height: 35px;
+  padding: 0.7vw;
+  border-radius: 0.3vw;
+  border: 1px solid #0d6efd;
+  cursor: pointer;
+  transition: all 300ms;
+  margin-right: 0.2vw;
+  background: #267dfd;
+  fill: #fff;
+}
+.cart-container > .shopping-cart:hover {
+  background: #0d6efd;
+}
+.cart-container > .cart {
+  width: 20vw;
+  min-width: 350px;
+  height: 100vh;
+  border: 1px solid #b3b3b3;
+  border-right: none;
+  background: #fff;
+  transform: translateY(-50%);
+}
+
+.logo {
+  width: 200px;
+  height: 164px;
+  fill: aqua;
+}
+
+.hidden {
+  transform: translateX(85%) !important;
 }
