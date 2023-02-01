@@ -45,6 +45,10 @@ async function caller() {
 	});
 
 	const updateCart = (sentCart = {}) => {
+		quantity = 0;
+		totalPrice = 0;
+		totalVat = 0;
+		grandTotal = 0;
 		for (const item in sentCart) {
 			// console.log(item);
 			quantity += sentCart[item];
@@ -56,11 +60,12 @@ async function caller() {
 		}
 		showCart.innerHTML = ``;
 
-		showCart.innerHTML = `<h1>Cart</h1>
-			<p class='quantity>Selected Items: ${quantity}</p>
-			<p class='total-price'>Total Price: ${totalPrice}&#2547;</p>
-			<p class='total-vat'>VAT: ${totalVat}&#2547;</p>
-			<p class='grand-total'>Grand Total: ${grandTotal}&#2547;</p>
+		showCart.innerHTML = `<h1>কার্ট</h1>
+			<p class='quantity'>মোট আইটেম: ${quantity}</p>
+			<p class='total-price'>মূল্য: ${totalPrice}&#2547;</p>
+			<p class='total-vat'>ভ্যাট: ${totalVat}&#2547;</p>
+			<p class='grand-total'>মোট মূল্য: ${grandTotal}&#2547;</p>
+			<button class="clear-cart"> Clear Cart</button>
 			`;
 
 		localStorage.setItem('stored-cart', JSON.stringify(cart));
@@ -69,6 +74,12 @@ async function caller() {
 	updateCart(cart);
 
 	document.addEventListener('click', (e) => {
+		if (
+			!e.target.classList.contains('cart-container') &&
+			!e.target.classList.contains('shopping-cart')
+		) {
+			cartContainer.classList.add('hidden');
+		}
 		if (e.target.classList.contains('addToCart')) {
 			const id = e.target.parentElement.children[1].innerText;
 			if (cart[id]) {
@@ -76,6 +87,11 @@ async function caller() {
 			} else {
 				cart[id] = 1;
 			}
+			updateCart(cart);
+		}
+
+		if (e.target.classList.contains('clear-cart')) {
+			cart = {};
 			updateCart(cart);
 		}
 	});
