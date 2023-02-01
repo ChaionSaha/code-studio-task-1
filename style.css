@@ -5,7 +5,8 @@
     justify-content: center;
   }
   .products > .card-container > .card {
-    width: 50vw;
+    padding: 3vw;
+    width: 80vw;
     text-align: center;
   }
   .products > .card-container > .card > .btns {
