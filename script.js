@@ -65,7 +65,7 @@ async function caller() {
 			<p class='total-price'>মূল্য: ${totalPrice}&#2547;</p>
 			<p class='total-vat'>ভ্যাট: ${totalVat}&#2547;</p>
 			<p class='grand-total'>মোট মূল্য: ${grandTotal}&#2547;</p>
-			<button class="clear-cart"> Clear Cart</button>
+			<button class="clear-cart"> কার্ট পরিষ্কার</button>
 			`;
 
 		localStorage.setItem('stored-cart', JSON.stringify(cart));
