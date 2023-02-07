@@ -104,6 +104,3 @@ shoppingCart.addEventListener('click', (e) => {
 		cartContainer.classList.add('hidden');
 	}
 });
-
-////////////////////////////////////////////////////////
-//////////// Cart
